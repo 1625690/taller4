@@ -22,6 +22,8 @@ public class controladora {
     
     private static Statement consulta;
     
+    private static String IP = "mysql2.eisc.univalle.edu.co";
+    
     
     
     /**
