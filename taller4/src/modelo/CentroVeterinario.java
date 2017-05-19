@@ -27,17 +27,33 @@ public class CentroVeterinario {
         mascotas.put(cantidadMascotas, m);
     }
     
-    public modificar(int peso,String nombre,String raza){
-        
-    
-    }
-    
     public Mascota buscar(int id){
-        if(mascotas.containsKey(id)){
-            
-        }
+        Mascota m = null;
+        if(mascotas.containsKey(id)){     
         
+            for (Iterator iterator = mascotas.values().iterator(); iterator.hasNext();) {
+
+                    m = (Mascota)iterator.next();
+                    if(m.getId()==id){
+                        return m;
+                    }
+            }        
+        
+        }
+        return m;
     }
+    
+    
+    public void modificar(int peso,String nombre,String raza,Mascota m){
+        
+        m.setNombre(nombre);
+        m.setPeso(peso);
+        m.setRaza(raza);
+    
+    }
+   
+    
     
     
 }
+
